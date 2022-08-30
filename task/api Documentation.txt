@@ -1,0 +1,87 @@
+
+==============Base Url================
+
+baseURL="http://localhost:3000/"
+
+---------APIS-----
+
+
+======for sign up =============
+
+baseURL + signUp
+
+Method:POST
+ 
+req in Body
+
+Json Format:
+
+{
+    "firstName":"kirols",
+    "MiddleName":"eid",
+    "LastName":"shohdy" ,
+     "email":"kirolseid@gmail.com", 
+     "phone":"01279448849", 
+     "password":"Kiro@1234"
+}
+
+password must be : minLength: 8, minLowercase: 1, minUppercase: 1, minNumbers: 1, minSymbols: 1
+
+---------login------------
+
+
+baseURL + 'Signin'
+
+req in Body
+
+Method:POST
+Json Format:
+{ 
+	"email":"kirolseid@gmail.com", 
+     	"password":"Kiro@1234"
+}
+
+
+
+---------create Order------------
+ 
+Method:POST
+
+baseURL + createOrder
+
+req in Body
+
+{
+    "userId":"2",
+    "totalPrice":"666666666",
+    "orderDetails":[["1",15],["4",551]],
+    "token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imtpcm9sc2VpZEBnbWFpbC5jb20iLCJpYXQiOjE2NjE4NjMwMTN9.AdfFwx3EqvVeienYW1ZYrgKzia9ft8fXpdQKsDkify0"
+}
+
+
+---------Get User Orders------------
+ 
+Method:POST
+
+baseURL + GetUserOrders
+
+req in Body
+
+{"userid":1}
+
+
+---------accept Order------------
+ 
+Method:POST
+
+baseURL + acceptOrder
+
+req in Body
+
+{
+	"orderId": 25, 
+	"status":"accept or reject "
+}
+
+
+Database file name is orderapp.sql
